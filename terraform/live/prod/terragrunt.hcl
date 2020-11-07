@@ -1,5 +1,6 @@
 remote_state {
   backend = "s3"
+  
 
   config = {
     bucket         = "${yamldecode(file("common_values.yaml"))["prefix"]}-tf-state-store-${yamldecode(file("common_tags.yaml"))["Env"]}-${yamldecode(file("common_values.yaml"))["aws_region"]}-particule"
